@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  postgresql:
+    build: .
+    image: postgres:latest
+    ports:
+      - '8080:8080'
+    volumes:
+      - ./data/var/lib/postgres
+    environment:
+      - POSTGRES_DB=dp
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=qwerty
